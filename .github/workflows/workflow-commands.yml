@@ -13,3 +13,9 @@ jobs:
         echo "Msg1"
         echo "Msg2"
         echo "::endgroup::"
+    - name: "github env add"
+      run: |
+        echo "MY_ENV_VAL=linux-abc" >> $GITHUB_ENV
+    - name: "echo env val"
+      run: |
+        echo $MY_ENV_VAL
